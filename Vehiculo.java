@@ -1,12 +1,14 @@
 package Estacionamiento;
 
-public class Vehiculo {
+public abstract class Vehiculo {
     
+    private String tipo;
     private String patente;
     private String marca;
     private int modelo;
 
-    public Vehiculo(String patente, String marca, int modelo) {
+    public Vehiculo(String tipo, String patente, String marca, int modelo) {
+        this.tipo = tipo;
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;
@@ -16,24 +18,24 @@ public class Vehiculo {
     public String toString() {
         return "Vehiculo{" + "patente=" + patente + ", marca=" + marca + ", modelo=" + modelo + '}';
     }
-
+    
+    public String getTipo(){
+        return this.tipo;
+    }
+    
     public String getMarca() {
-        return marca;
+        return this.marca;
     }
 
     public int getModelo() {
-        return modelo;
+        return this.modelo;
     }
     
     public String getPatente(){
         return this.patente;
     }
     
-    public void acelerar(){
-        System.out.println("acelerando");
-    }
+    public abstract void acelerar();
     
-    public void frenar(){
-        System.out.println("Frenando");
-    }
+    public abstract void frenar();
 }

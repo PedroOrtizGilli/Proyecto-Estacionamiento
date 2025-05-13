@@ -16,6 +16,10 @@ public class Estacionamiento122 {
         this.vehiculo = new ArrayList<>();
 
     }
+
+    public ArrayList<Vehiculo> getLista() {
+        return vehiculo;
+    }
     
     //Agrega vahiculos a la lista 
     public void agregarVehiculo(Vehiculo o){
@@ -66,7 +70,10 @@ public class Estacionamiento122 {
             return null;
         }
         return vehiculo.remove(indice);
-        
+    }
+    
+    private Vehiculo removerVehiculo(int indice){
+        return vehiculo.remove(indice);
     }
     
     //

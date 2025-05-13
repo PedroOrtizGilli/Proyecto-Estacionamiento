@@ -5,7 +5,7 @@ public class Auto extends Vehiculo{
     private boolean tieneGPS;
 
     public Auto(String patente, String marca, int modelo) {
-        super(patente, marca, modelo);
+        super("Auto", patente, marca, modelo);
     }
     
     //Agrega GPS al auto
@@ -28,5 +28,11 @@ public class Auto extends Vehiculo{
         return "Auto{" + "tieneGPS=" + tieneGPS + cadena;
     }
     
+    public void acelerar(){
+        System.out.println("El auto acelera");
+    }
     
+    public void frenar(){
+        System.out.println("El auto frena");
+    }
 }
